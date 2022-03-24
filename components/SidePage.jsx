@@ -47,7 +47,7 @@ const Lister = styled.a`
     cursor: pointer;
 `
 
-const Sidepage = () => {
+const SidePage = () => {
     const { close, visible } = useGlobalContext()
   return (
     <Container visible={visible}>
@@ -67,4 +67,4 @@ const Sidepage = () => {
   );
 };
 
-export default Sidepage;
+export default SidePage;

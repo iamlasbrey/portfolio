@@ -9,7 +9,7 @@ import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import { MongoClient } from 'mongodb'
 import { useGlobalContext } from '../context'
-import Sidepage from '../components/Sidepage'
+import SidePage from '../components/SidePage'
 import Head from 'next/head'
 
 
@@ -35,7 +35,7 @@ function Home(props) {
           <meta charSet='utf-8' />
     </Head>
 
-          <Sidepage />
+          <SidePage />
           <Header />
           <Hero />
           <About />
