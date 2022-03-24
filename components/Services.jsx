@@ -4,8 +4,6 @@ import { MdDesignServices } from 'react-icons/md'
 import { IoMdConstruct } from 'react-icons/io'
 import { FaGlobe } from 'react-icons/fa'
 import { AiFillApple } from 'react-icons/ai'
-import Aos from 'aos'
-import "aos/dist/aos.css"
 
 const Container = styled.div`
     background: url('https://res.cloudinary.com/iamlasbrey/image/upload/v1646489855/uzoma.xyz/Group_3desktop_1_u34nvx.png');
@@ -78,14 +76,8 @@ const Header3 = styled.p`
 
 const Services = () => {
 
-    useEffect(()=>{
-        Aos.init({
-            duration: 500
-        })
-    },[])
-
     return (
-        <Container className='services' id='services' data-aos="fade-up">
+        <Container className='services' id='services'>
             <Elements>
                 <Header> My Services </Header>
                 <Divider />

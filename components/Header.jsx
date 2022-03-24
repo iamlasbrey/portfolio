@@ -130,7 +130,7 @@ const Header = () => {
                         <FaHamburger />
                     </Hamburger>
 
-                            <ChangeMode onClick={close}>
+                            <ChangeMode onClick={toggleDark}>
                                 {isDarkMode ? <FaSun style={{ color: "#FB8B3B"}} /> : <FaMoon /> }
                             </ChangeMode>
                 </Left>

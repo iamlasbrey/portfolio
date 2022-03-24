@@ -17,7 +17,7 @@ const index = (props) => {
 
 export async function getStaticPaths() {
     const client = await MongoClient.connect(
-        "mongodb+srv://user-123:123@cluster0.onf59.mongodb.net/Works?retryWrites=true&w=majority"
+        process.env.URI
     );
     const db = client.db();
     const workCollection = db.collection("works");
@@ -37,7 +37,7 @@ export async function getStaticPaths() {
         const id = context.params.id;
     
         const client = await MongoClient.connect(
-            "mongodb+srv://user-123:123@cluster0.onf59.mongodb.net/Works?retryWrites=true&w=majority"
+            process.env.URI
         );
         const db = client.db();
         const workCollection = db.collection("works");

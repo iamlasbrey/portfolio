@@ -3,9 +3,6 @@ import styled from 'styled-components'
 import { useGlobalContext } from '../context'
 import Works from './Works'
 
-import Aos from 'aos'
-import "aos/dist/aos.css"
-
 
 const Container = styled.div`
     display: flex;
@@ -45,14 +42,8 @@ const Grid = styled.div`
 const Workslists = ({works}) => {
     const { isDarkMode } = useGlobalContext()
 
-    React.useEffect(()=>{
-        Aos.init({
-            duration: 3000
-        })
-    },[])
-
     return (
-        <Container className='portfolio' id='portfolio' data-aos="fade-up">
+        <Container className='portfolio' id='portfolio'>
             <Elements isDarkMode={isDarkMode}>
             <Header isDarkMode={isDarkMode}> My Works</Header>
             <Divider />

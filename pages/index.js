@@ -49,7 +49,7 @@ function Home(props) {
 }
 
 export const  getStaticProps=async()=>{
-  const client = await MongoClient.connect('mongodb+srv://user-123:123@cluster0.onf59.mongodb.net/Works?retryWrites=true&w=majority')
+  const client = await MongoClient.connect(process.env.URI)
   const db = client.db()
   const MyWorks = db.collection('works')
   const works = await MyWorks.find().toArray()
